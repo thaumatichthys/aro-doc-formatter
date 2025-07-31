@@ -78,11 +78,44 @@ SECTION_TEXTS = np.array([
         "",
         "",
         ""
+    ],
+    [
+        "6.1 Receiver Essentials",
+        "6.2 Receiver Dynamics",
+        "6.3 Receiver Performance",
+        "6.4 Receiver Circuitry",
+        "6.5 Receiver Fundamentals",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    [
+        "7.1 Antenna Tuning",
+        "7.2 Impedance dynamics",
+        "7.3 Antenna Matching",
+        "7.4 Half Wave Dipoles",
+        "7.5 Antenna Polarization",
+        "7.6 Effective Radiated Power (ERP)",
+        "7.7 Antenna Elevation",
+        "7.8 Antenna Radiation Patterns",
+        "7.9 Waveguides",
+        "",
+        "",
+        ""
     ]
 ])
 CHAPTER_TEXTS = np.array([
     "Chapter 1 - Advanced Theory",
-    "Chapter 2 - Components and Circuits"
+    "Chapter 2 - Components and Circuits",
+    "Chapter 3 - Electrical Measurement Techniques and Instruments",
+    "Chapter 4 - Power Supplies",
+    "Chapter 5 - Signal Processing",
+    "Chapter 6 - Superheterodyne Receivers",
+    "Chapter 7 - Antennas, Feedlines and Matching"
 ])
 
 style = document.styles['Normal']
@@ -95,7 +128,7 @@ def checkSectionOverflow(q_number):
     number = int(numbers[-1])
     section = int(numbers[-2])
     chapter = int(numbers[-3])
-    print(SECTION_TEXTS[chapter, section])
+    # print(SECTION_TEXTS[chapter, section])
     if section == 1 and number == 1:
         # add new chapter thing
         p = document.add_paragraph()
@@ -110,7 +143,7 @@ def checkSectionOverflow(q_number):
 with open("amat_adv_quest_delim.txt", 'r') as f:
     print(f.readline())
     # print(f.readline())
-    for i in range(50):
+    for i in range(549):
         entries = f.readline().split(';')
         entries = entries[0:6]  # remove french lines
 
